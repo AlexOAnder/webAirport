@@ -1,8 +1,50 @@
+$height : 1000px;
+
 body
 	background-color: #fff
 	
 div
 	display: block
+.square
+	display: inline-block
+	width: 15px
+	height: 15px
+	border-radius: 15px
+.redColor
+	background-color: red
+.greenColor
+	background-color: green
+
+.loader
+	background-color: #fff
+	opacity: 0.5
+	z-index: 9998
+	width: 100%
+	height: $height
+	overflow-y: hidden
+	position: absolute
+	img
+	    margin: 0 auto
+	    position: relative
+	    top: 20%
+	    display: inherit
+.blackfield
+	z-index: 9999
+	background-color: #000
+	opacity: 0.5
+	position: absolute
+	width: 100%
+	height: $height
+	display: block
+	color: white
+	font-size: 44px
+	text-align: center
+	overflow-y: hidden
+	div
+		top: 20%
+		position: absolute
+.buttonBlock
+	padding-top: 10px
 .mid 
 	display: inline-block
 .mainBody 
@@ -10,9 +52,10 @@ div
 	margin: 0px auto
 	padding-top: 90px
 	max-width: 1024px
-	height: 1000px
+	height: $height
 	border: 1px solid black
-	.btn
+	display: block
+	.table .btn
 		width: 100px
 .footer
     bottom: 0

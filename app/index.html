@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<script type="text/javascript" src="js/jquery-2.1.3.js"></script> 
+	<script type="text/javascript" src="js/common.js"></script> 
 </head>
 <body>
 	<div class="header col-xs-12 col-md-12">
@@ -16,8 +17,13 @@
   			<button type="button" class="btn btn-default btn-lg">Manager</button>
 		</div>
 		<div class="col-md-offset-3 col-md-3 col-xs-6 logoName">
-			Airport Status Board 
+			<span id="serverStatus" class="square greenColor"></span>
+			<span>Airport Status Board </span>
 		</div>
+	</div>
+	<div class="loader hidden" ><img src="img/ajax_loader_green_350.gif" height="200" width="200"/></div>
+	<div class="blackfield hidden">
+		<div>Cannot connect to server - reload page or connect with administrator </br> AlexOAnder</div>
 	</div>
 	<div class="mid col-md-12 col-xs-12">
 		<div class="mainBody">
@@ -27,42 +33,42 @@
 					<tbody>
 						<tr>
 							<td>
-								<button type="button" class="btn btn-success">All fine</button>
+								<button type="button" id='b403' class="btn btn-success">All fine</button>
 							</td>
 							<td>Tech park T-403</td>
 						</tr>
 						<tr>
 							<td>
-								<button type="button" class="btn btn-warning">Warning</button>
+								<button type="button" id='b204' class="btn btn-warning">Warning</button>
 							</td>
 							<td>Weather status P-204</td>
 						</tr>
 						<tr>
 							<td>
-								<button type="button" class="btn btn-danger">Danger</button>
+								<button type="button" id='b102' class="btn btn-danger">Danger</button>
 							</td>
 							<td>Security center S-102</td>
 						</tr>
 						<tr>
 							<td>
-								<button type="button" class="btn btn-info">Check Info</button>
+								<button type="button" id='b202' class="btn btn-info">Check Info</button>
 							</td>
 							<td>Repair center R-202</td>
 						</tr>
 						<tr>
 							<td>
-								<button type="button" class="btn btn-success">All fine</button>
+								<button type="button" id='b008'class="btn btn-success">All fine</button>
 							</td>
 							<td>Runways R-008</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="col-md-6">
-				<h3>Info about section</h3>
-				<p>Section</p>
+			<div class="col-md-6 infoSection">
+				<h4>Info about section</h4>
+				<p>Section name</p>
 				<div>
-					<select class="form-control" disabled>
+					<select class="form-control sectSelect " disabled>
 					  <option value=1 >Tech park T-403</option>
 					  <option value=2 >Weather status P-204</option>
 					  <option value=3 >Security center S-102</option>
@@ -71,7 +77,20 @@
 					</select>
 				</div>
 				<p>Description</p>
-				<textarea class="form-control " rows="3" readonly><--- Select one of the status to get info about it </textarea>
+				<textarea class="form-control " rows="3" readonly placeholder="<--- Select one of the status to get info about it"></textarea>
+				<div class="">
+				<p>Status</p>
+					<select class="form-control statusSelect" disabled>
+					  <option value=1 class="bg-success">All fine</option>
+					  <option value=2 class="bg-info">Check Info</option>
+					  <option value=3 class="bg-warning">Warning</option>
+					  <option value=4 class="bg-danger">Danger</option>
+					</select>
+				</div>
+				<div class="pull-right buttonBlock">
+					<button type="button" class="btn btn-default updateStatusBtn">Update</button>
+					<button type="button" class="btn btn-default canceltatusBtn hide">Cancel</button>
+				</div>
 			</div>
 			<div class="addInfoSection col-md-12 col-xs-12">
 				<h3>Create new notify ticket</h3>
@@ -87,21 +106,25 @@
 				</div>
 				<h4>Description</h4>
 				<textarea class="form-control " rows="3" placeholder="Add description here (Important)"></textarea>
-				<div class="col-md-4"><h4 class="col-md-6">Issue 'level' </h4>
-				</div>
-				<div class="col-md-8 radioBlock">
-					<label class="radio-inline">
-					  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1"> 
-					  	<button type="button" class="btn btn-info disabled">Check Info</button>
-					</label>
-					<label class="radio-inline">
-					  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2"> 
-					  	<button type="button" class="btn btn-warning disabled">Warning</button>
-					</label>
-					<label class="radio-inline">
-					  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 
-					  	<button type="button" class="btn btn-danger disabled">Danger</button>
-					</label>
+				<div>
+					<div class="col-xs-12 col-md-4"><h4 class="col-md-12">Issue 'level' </h4></div>
+					<div class=" radioBlock col-md-6">
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions"  id="inlineRadio2" value="1"> 
+						  	<button type="button" class="btn btn-info disabled">Check Info</button>
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2"> 
+						  	<button type="button" class="btn btn-warning disabled">Warning</button>
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 
+						  	<button type="button" class="btn btn-danger disabled">Danger</button>
+						</label>
+
+					</div>
+					<div class="col-md-2" style="padding-top:10px"><button type="button" class="btn btn-primary ">Add Notify</button></div>
+					
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,16 @@
+{
+  "name": "webairport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AlexOAnder",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.12",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1"
+  }
+}
