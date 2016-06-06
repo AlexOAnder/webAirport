@@ -1,0 +1,57 @@
+body {
+  background-color: #fff; }
+
+div {
+  display: block; }
+
+.mid {
+  display: inline-block; }
+
+.mainBody {
+  background-color: #ffd;
+  margin: 0px auto;
+  padding-top: 90px;
+  max-width: 1024px;
+  height: 1000px;
+  border: 1px solid black; }
+  .mainBody .btn {
+    width: 100px; }
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  background-color: #ddddff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2); }
+
+.footer div {
+  padding: 10px;
+  display: inline-block; }
+
+.header div {
+  padding: 10px;
+  color: white; }
+
+.header {
+  z-index: 10;
+  position: fixed;
+  background-color: #563d7c;
+  box-shadow: 0px 5px 40px 1px rgba(0, 0, 0, 0.3); }
+
+.logoName {
+  text-align: right;
+  line-height: 2;
+  font-size: 20px; }
+
+.leftBlock .rightBlock {
+  width: 50%; }
+
+.addInfoSection div {
+  padding-top: 5px; }
+
+.radioBlock label {
+  padding-top: 5px; }
+
+.radioBlock label > input {
+  margin-top: 10px; }
