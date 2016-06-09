@@ -31,33 +31,33 @@
 				<table class="table">
 					<caption>STATUS</caption>
 					<tbody>
-						<tr>
-							<td>
-								<button type="button" id='b403' class="btn btn-success">All fine</button>
+						<tr >
+							<td id='b403'>
+								<button type="button"  class="btn btn-success">All fine</button>
 							</td>
 							<td>Tech park T-403</td>
 						</tr>
 						<tr>
-							<td>
-								<button type="button" id='b204' class="btn btn-warning">Warning</button>
+							<td id='b204'>
+								<button type="button"  class="btn btn-warning">Warning</button>
 							</td>
 							<td>Weather status P-204</td>
 						</tr>
 						<tr>
-							<td>
-								<button type="button" id='b102' class="btn btn-danger">Danger</button>
+							<td id='b102' >
+								<button type="button" class="btn btn-danger">Danger</button>
 							</td>
 							<td>Security center S-102</td>
 						</tr>
 						<tr>
-							<td>
-								<button type="button" id='b202' class="btn btn-info">Check Info</button>
+							<td id='b202'>
+								<button type="button"  class="btn btn-info">Check Info</button>
 							</td>
 							<td>Repair center R-202</td>
 						</tr>
 						<tr>
-							<td>
-								<button type="button" id='b008'class="btn btn-success">All fine</button>
+							<td id='b008'>
+								<button type="button" class="btn btn-success">All fine</button>
 							</td>
 							<td>Runways R-008</td>
 						</tr>
@@ -65,8 +65,9 @@
 				</table>
 			</div>
 			<div class="col-md-6 infoSection">
-				<h4>Info about section</h4>
-				<p>Section name</p>
+				<div class="hidden" id="eventId"></div>
+				<h3>Info about section</h3>
+				<h4>Section name</h4>
 				<div>
 					<select class="form-control sectSelect " disabled>
 					  <option value=1 >Tech park T-403</option>
@@ -76,10 +77,10 @@
 					  <option value=5 >Runways R-008</option>
 					</select>
 				</div>
-				<p>Description</p>
+				<h4>Description</h4>
 				<textarea class="form-control " rows="3" readonly placeholder="<--- Select one of the status to get info about it"></textarea>
 				<div class="">
-				<p>Status</p>
+				<h4>Status</h4>
 					<select class="form-control statusSelect" disabled>
 					  <option value=1 class="bg-success">All fine</option>
 					  <option value=2 class="bg-info">Check Info</option>
@@ -88,14 +89,15 @@
 					</select>
 				</div>
 				<div class="pull-right buttonBlock">
-					<button type="button" class="btn btn-default updateStatusBtn">Update</button>
+					<button type="button" class="btn btn-default updateStatusBtn">Click to Update</button>
 					<button type="button" class="btn btn-default canceltatusBtn hide">Cancel</button>
 				</div>
 			</div>
 			<div class="addInfoSection col-md-12 col-xs-12 newTicketForm" style='display:none'>
 				<h3>Create new notify ticket</h3>
-				<h4>Section</h4>
+				
 				<div class="col-md-12">
+					<h4>Section</h4>
 					<select class="form-control" >
 					  <option value=1 >Tech park T-403</option>
 					  <option value=2 >Weather status P-204</option>
@@ -104,8 +106,9 @@
 					  <option value=5 >Runways R-008</option>
 					</select>
 				</div>
-				<h4>Description</h4>
+				
 				<div class="col-md-12">
+					<h4>Description</h4>
 					<textarea class="form-control " rows="3" placeholder="Add description here (Important)"></textarea>
 				</div>
 				<div>
@@ -137,6 +140,7 @@
 	<footer class="footer col-md-12 col-xs-12">
 		<div>I think you dont care about footer</div>
 		<div> But here i will type my name - AlexOAnder</div>
+		<div style="color: #ddddff">and  I am sorry for that useless shitty site</div>
 	</footer>
 </body>
 </html>
